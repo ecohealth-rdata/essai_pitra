@@ -6,6 +6,12 @@
     "blog.qmd": [
       "posts",
       "posts/*/index.qmd"
+    ],
+    "publicação.qmd": [
+      "publications.yml"
+    ],
+    "publication.qmd": [
+      "publications.yml"
     ]
   }
 }

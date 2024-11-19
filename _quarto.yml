@@ -1,18 +1,27 @@
 project:
   type: website
   output-dir: "docs"
-
+  
 website:
     title: "Meu Blog"
     description: "Blog em Português sobre Imagiologia Médica Geral"
     open-graph: true
+    twitter-card: true
+    page-navigation: true
+    back-to-top-navigation: true
+    
     navbar:
+      title: "Imagiologia Médica"
+      search: true
+      #logo:  "HGC_logotipo.png"  #assets/images/HGC_logotipo.png
       left:
         - icon: house-fill
           text: "Home"
           file: index.qmd
         - text: "Blog"
           file: blog.qmd
+        - text: "Publicações"
+          file: publication.qmd
       right:
         - text: "Sobre mim"
           file: about.qmd
@@ -27,13 +36,14 @@ website:
           href: https://twitter.com
         - icon: rss
           href: index.xml # lien vers le flux RSS
+  
 rss: true
 format:
   html:
     theme:
       light: quartz
       dark: darkly
-
-
-
+    lang: pt
+    date-format: 'dddd[, the] Do [of] MMMM, YYYY'
+    highlight-style: github-dark
 

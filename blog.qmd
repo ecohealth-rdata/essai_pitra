@@ -2,6 +2,7 @@
 title: "Posts"
 subtitle: "Imagiologia - Data Análises - Medecina geral"
 title-block-banner: true
+logo:  assets/images/HGC_logotipo.png
 toc: true
 aliases: ["blog/"]
 format:
@@ -12,7 +13,7 @@ listing:
   date-format: "DDD/MMM/YYY"
   feed: false
   filter-ui: false
-  type: default
+  type: grid
   sort-ui: false
   sort: "date desc"
   categories: true
@@ -27,6 +28,7 @@ grid:
     body-width: 900px
     #margin-width: auto      # Utilisez "auto" pour centrer les marges
     #gutter-width: 1.5rem    # Espacement entre les colonnes
+    
 ---
 
 ::: {.profile-header layout="[21,79]"}

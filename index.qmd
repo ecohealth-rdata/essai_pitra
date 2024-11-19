@@ -1,7 +1,7 @@
 ---
 title: "Filomena De Fátima J. Pitra MD."
 lang: en
-image: dr_pi_r.png 
+image: /assets/images/dr_pi_r.png 
 lightbox: true
 about:
   template: solana  #marquee   #trestles  , jolla
@@ -11,6 +11,7 @@ about:
     - icon: folder
       text: CV 
       href: cv.qmd
+      aria-label: "ORCID logo linking to ORCID account"
     - icon: twitter
       text: Twitter
       href: https://twitter.com/

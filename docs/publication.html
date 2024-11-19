@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Posts – Meu Blog</title>
+<title>Publications (7 + 41) – Meu Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,20 +73,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listings .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-news','listing-posts',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-journal-title','listing-first','listing-position',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-journal-title"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listings'] = new List('listing-blog-listings', options);
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -130,12 +130,12 @@ window.Quarto = {
 };
 </script>
 
-<meta property="og:title" content="Posts – Meu Blog">
-<meta property="og:description" content="Imagiologia - Data Análises - Medecina geral">
+<meta property="og:title" content="Publications (7 + 41) – Meu Blog">
+<meta property="og:image" content="/assets/images/social-profile.png">
 <meta property="og:site_name" content="Meu Blog">
-<meta name="twitter:title" content="Posts – Meu Blog">
-<meta name="twitter:description" content="Imagiologia - Data Análises - Medecina geral">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Publications (7 + 41) – Meu Blog">
+<meta name="twitter:image" content="/assets/images/social-profile.png">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -161,11 +161,11 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./publication.html"> 
+    <a class="nav-link active" href="./publication.html" aria-current="page"> 
 <span class="menu-text">Publicações</span></a>
   </li>  
 </ul>
@@ -200,14 +200,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Posts</h1>
-            <p class="subtitle lead">Imagiologia - Data Análises - Medecina geral</p>
+    <div class="quarto-title column-page">
+      <h1 class="title">Publications (7 + 41)</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -218,107 +217,77 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Tudo <span class="quarto-category-count">(2)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 
-<div>
 
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Ordenar por" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Ordenar por</option>
+       <option value="index" data-direction="asc">Pré-selecionado</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Issued - Mais velho
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Issued - O mais novo
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Título
+        </option>
+         <option value="listing-journal-title" data-direction="asc">
+          Journal
+        </option>
+         <option value="listing-position" data-direction="asc">
+          Rank
+        </option>
+         <option value="listing-first" data-direction="asc">
+          First
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filtro">
+    </div>
 </div>
-<div class="profile-header quarto-layout-panel" data-layout="[21,79]">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 21.0%;justify-content: center;">
-<p><img src="maira_pitra.png" class="profile-pic img-fluid" width="154"></p>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 79.0%;justify-content: flex-start;">
-<p>Olá! Eu sou o Dra. Filomena D.F.J Pitra. Obrigada por tirar um tempo para visitar meu blog! Espero que você aproveite a leitura e encontre conteúdos inspiradores e interessantes aqui. Para mais informações sobre mim, siga este link: Sobre mim</p>
-</div>
-</div>
-</div>
-<p>📮 Artigos de Blog</p>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="news,code,analysis" data-listing-date-sort="1730415600000" data-listing-file-modified-sort="1730473697343" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
-<a href="./posts/post-with-code/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Post With Code
-</h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-011/nov/+0100
-</div>
-</div>
-<table class="card-other-values">
-<tbody><tr>
-<td>
-news
-</td>
-<td class="news">
-&nbsp;
-</td>
-</tr>
+<table class="quarto-listing-table table">
+<thead>
 <tr>
-<td>
-posts
-</td>
-<td class="posts">
-&nbsp;
-</td>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Issued</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Título</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-journal-title" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Journal</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-first" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">First</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-position" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Rank</a>
+</th>
 </tr>
-</tbody></table>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="news" data-listing-date-sort="1730156400000" data-listing-file-modified-sort="1730473697200" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="32">
-<a href="./posts/welcome/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Welcome To My Blog
-</h5>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-2929/out/+0100
-</div>
-</div>
-<table class="card-other-values">
-<tbody><tr>
-<td>
-news
-</td>
-<td class="news">
-&nbsp;
-</td>
-</tr>
-<tr>
-<td>
-posts
-</td>
-<td class="posts">
-&nbsp;
-</td>
-</tr>
-</tbody></table>
-</div>
-</div>
-</a>
-</div>
-</div>
+</thead>
+<tbody class="list">
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 Nenhum item correspondente
 </div>
-</div>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

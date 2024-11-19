@@ -1,12 +1,20 @@
 ---
 title: "Sobre mim"
-image: pitrdr.png
+subtitle: |
+  Médica, Imagiologista, & cinephile.
+  
+image: /assets/images/pitrdr.png #
 about:
-  template: jolla
+  id: edu-exp
+  template: solana
+  image-width: 10em
+  image-shape: rectangle
   links:
     - icon: twitter
       text: Twitter
       href: https://twitter.com
+      aria-label: "Mastodon logo linking to MickaelCanouil Fosstodon account"
+      rel: me
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com
@@ -53,3 +61,46 @@ Sou funcionária angolana, trabalhando no Hospital Geral de Cabinda. Anteriormen
 Meu trabalho inclui o diagnóstico de doenças por meio de imagens, combinando minhas habilidades clínicas de médica geral. Analiso dados de imagens dos pacientes utilizando diversas ferramentas de software.
 
 Neste site, você encontrará minha lista de publicações, apresentações, meu CV e um blog técnico.
+
+
+::: {#edu-exp}
+:::
+
+I am currently working as a consultant in __*Biostatistics*__ in the field of genetics, *i.e.*, proteomics, metabolomics, transcriptomics, *etc.* in Lille & Paris, France.  
+Additionally, I am also a __*freelance*__, available for hire to work on __*{{< iconify fa6-brands:r-project >}} and Quarto related projects*__.  
+I have developed a few {{< iconify fa6-brands:r-project >}}&nbsp;packages (_e.g._,&nbsp;[insane](https://github.com/mcanouil/insane), [NACHO](https://github.com/mcanouil/NACHO)), and although some are not very useful, they are most definitely entertaining (_i.e._,&nbsp;[ggpacman](https://github.com/mcanouil/ggpacman)).  
+I also enjoy watching movies (![](https://raw.githubusercontent.com/mcanouil/imdb-ratings/main/media/imdb.svg){fig-alt="Movies seen count"}) and playing with {{< iconify fa6-brands:r-project >}} ([github.com/mcanouil/imdb-ratings](https://github.com/mcanouil/imdb-ratings)).
+
+Have a look at my complete [_{{< iconify fa6-regular file-lines >}} curriculum vitae_](https://m.canouil.dev/curriculum-vitae/).
+
+![](https://raw.githubusercontent.com/mcanouil/imdb-ratings/main/media/streak.svg){fig-alt="Movies seen in a movie theatre year streak"}
+
+:::: {.grid}
+
+::: {.g-col-12 .g-col-md-8 style="text-align: left;"}
+## Education
+
+- **_Ph.D._ in Biostatistics**, **2017**  
+  *University of Lille, France*
+
+- **_M.Sc._ in Biostatistics, Bioinformatics and Genomics** (*Specialised in Biostatistics*), **2011**  
+  *University Claude Bernard Lyon 1, France*
+
+- **_B.Sc._ in Biology** (*Specialised in Biostatistics*), **2009**  
+  *University Claude Bernard Lyon 1, France*
+:::
+
+::: {.g-col-12 .g-col-md-4 style="text-align: left;"}
+## Interests
+
+- Watching Movies
+- Quarto
+- Multi-omics
+- Longitudinal Data
+- Data Analysis
+- Data Visualisation
+- Knowledge Sharing
+- Learning New Skills
+:::
+
+::::
